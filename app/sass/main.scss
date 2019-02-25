@@ -1,24 +1,32 @@
 * {
     padding: 0;
     margin: 0;
-    
 }
+
 body {
     font-size: 16px;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
 header {
-    padding-bottom: 3rem ;
+    padding-bottom: 3rem;
 }
+
 .uppercase {
     text-transform: uppercase;
 }
+
 .header-search {
     border: none;
     color: #34495e;
-    width: 400px;
-    input, 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+    }
+    input,
     button {
         background-color: #ecf0f1;
     }
@@ -28,6 +36,10 @@ header {
         border-radius: 5px;
         outline: none;
         box-shadow: none;
+        width: 70%;
+        border-radius: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         &:focus {
             background-color: #ecf0f1;
             border: none;
@@ -36,15 +48,22 @@ header {
         }
     }
 }
+
 .search-btn {
     border: none;
-    position: absolute;
-    left: -3rem;
-    z-index: 12;
     outline: none;
     box-shadow: none;
-   
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 35px;
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
 }
+
 .input-group-append {
     .search-btn {
         z-index: 12!important;
@@ -52,10 +71,11 @@ header {
         box-shadow: none;
     }
 }
+
 .contacts-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     .phone-wrapper {
         display: flex;
         flex-direction: row;
@@ -72,15 +92,17 @@ header {
         }
     }
 }
+
 .login-card {
     border-radius: 5px;
+    @media screen and (max-width: 576px) {
+        margin-left: 0;
+    }
 }
 
 .login-wrapper {
     display: flex;
-    margin-left: 0!important;
-    margin-right: 0!important;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
     justify-content: center;
     a {
         color: #95a5a6;
@@ -94,7 +116,7 @@ header {
     .login {
         display: flex;
         flex-direction: row;
-        &:before{
+        &:before {
             content: '';
             background-image: url(../img/key.png);
             background-repeat: no-repeat;
@@ -114,7 +136,7 @@ header {
     .signin {
         display: flex;
         flex-direction: row;
-        &:before{
+        &:before {
             content: '';
             background-image: url(../img/lock.png);
             background-repeat: no-repeat;
@@ -124,10 +146,13 @@ header {
         }
     }
 }
+
 .card-wrapper {
     padding: 10px 10px;
     background-color: #ecf0f1;
     border-radius: 5px;
+    align-items: center;
+    display: flex;
     .card {
         width: 50px;
         height: 50px;
@@ -144,22 +169,49 @@ header {
         p {
             display: block;
             color: #2ecc71;
+            margin-bottom: 0;
         }
         span {
             color: #34495e;
         }
     }
 }
+
 .nav-wrapper {
     width: 100%;
     background-color: #34495e;
+    display: flex;
+    .nav-mobile {
+        display: none;
+        @media screen and (max-width: 576px) {
+            display: flex;
+            text-transform: uppercase;
+            a {
+                color: #fff;
+            }
+            .navbar-expand-lg {
+                // margin: auto;
+            }
+        }
+    }
 }
 
-.nav {
+.nav-desctop {
     font-size: 14px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     padding: 28px 0;
+    @media screen and(max-width: 576px) {
+        // display: flex;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+    }
     a {
         color: #fff;
         padding: 0.5rem .5rem;
@@ -177,7 +229,6 @@ header {
         display: inline-block;
         margin-left: .5rem;
     }
-    
 }
 
 .catalog-wrapper {
@@ -186,13 +237,10 @@ header {
     background-size: cover;
     background-position: center;
     padding: 30px 0;
-    
     .carousel-item {
         position: relative;
         img {
             position: relative;
-            
-        
         }
         .text-block {
             position: absolute;
@@ -209,6 +257,9 @@ header {
         .middle-text {
             font-size: 29.5px;
             font-weight: 100;
+            @media screen and (max-width: 576px) {
+                font-size: 18.5px;
+            }
         }
         .more-info {
             background-color: #34495e;
@@ -218,6 +269,12 @@ header {
             align-self: flex-end;
             margin-top: 25px;
             border-radius: 8px;
+            border: none;
+            @media screen and (max-width: 576px) {
+                width: auto;
+                height: auto;
+                margin-top: 80px;
+            }
         }
     }
 }
@@ -225,7 +282,12 @@ header {
 .header-text {
     font-size: 44px;
     font-weight: bold;
+    @media screen and (max-width: 576px) {
+        font-size: 26px;
+        padding-bottom: 40px;
+    }
 }
+
 .button-wrapper {
     display: flex;
     flex-direction: column;
@@ -252,7 +314,6 @@ header {
             color: #fff;
             display: flex;
             align-items: center;
-
             &::before {
                 content: '';
                 width: 5px;
@@ -261,7 +322,6 @@ header {
                 background-color: #fff;
                 display: block;
                 margin-right: 10px;
-
             }
         }
         .dropdown-menu {
@@ -270,7 +330,7 @@ header {
     }
     .dropright {
         border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px; 
+        border-bottom-right-radius: 5px;
     }
     .catalog-title {
         font-size: 20px;
@@ -290,9 +350,9 @@ header {
             display: block;
             margin-right: 1rem;
         }
-        
     }
 }
+
 .our-benefits-wrapper {
     display: flex;
     flex-direction: column;
@@ -305,8 +365,6 @@ header {
         padding-bottom: 80px;
     }
     .benefits-items {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
         align-items: center;
     }
     .benefit-logo-desc {
@@ -319,9 +377,9 @@ header {
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin-bottom: 2rem;
     }
 }
-
 
 .products-category-slider {
     padding: 80px 0;
@@ -340,43 +398,39 @@ header {
     }
     .category-list {
         a {
-           padding: 25px 55px;
-           font-size: 20px;
-           font-weight: bold;
-           background-color: #34495e;
-           color: #fff;
-           display: inline-block;
-           text-align: center;
-           border-radius: 8px;
-           text-decoration: none;
-           position: relative;
-           &::before {
-               content: '';
-               width: 0;
-               height: 0;
-               border-style: solid;
-               border-width: 10px 10px 0 10px;
-               border-color: #34495e transparent transparent transparent;
-               position: absolute;
-               bottom: -7px;
-               left: calc(50% - 5px);
-
-           }
+            padding: 25px 55px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #34495e;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            position: relative;
+            &::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 0 10px;
+                border-color: #34495e transparent transparent transparent;
+                position: absolute;
+                bottom: -7px;
+                left: calc(50% - 5px);
+            }
         }
     }
 }
+
 .our-products {
-    
     .product-photo {
         position: relative;
+        text-align: center;
         &::before {
             content: url("../img/hit-label.png");
             position: absolute;
             right: -7px;
-            display: block;
-            width: 40px;
-            height: 40px;
-
         }
         &::after {
             content: url("../img/in-stock.png");
@@ -384,8 +438,6 @@ header {
             left: -19px;
             bottom: -7px;
             display: block;
-            width: 40px;
-            height: 40px;
         }
         &:last-child::before {
             content: url("../img/out-of-stock.png");
@@ -393,29 +445,36 @@ header {
             position: absolute;
             left: -19px;
             bottom: -7px;
-            display: block;
-            width: 40px;
-            height: 40px;
         }
-        
     }
     .products-items-wrapper {
         position: relative;
         padding-bottom: 80px;
-    //    &:last-child::before {
-    //         content: url("../img/out-of-stock.png");
-    //         position: absolute;
-    //         left: 52.5rem;
-    //         bottom: 10.4rem;
-    //         width: 40px;
-    //         height: 40px;
-    //         z-index: 2;
-    //     }
+        //    &:last-child::before {
+        //         content: url("../img/out-of-stock.png");
+        //         position: absolute;
+        //         left: 52.5rem;
+        //         bottom: 10.4rem;
+        //         width: 40px;
+        //         height: 40px;
+        //         z-index: 2;
+        //     }
+        .card-group {
+            .card {
+                min-height: 100%;
+                width: 18rem;
+                border: 1px solid transparent;
+                text-align: center;
+                display: flex;
+                align-items: stretch;
+            }
+        }
         .product-info {
             text-align: center;
+            display: flex;
+            flex-direction: column;
             .product-desc {
                 font-size: 16px;
-
             }
             .product-price {
                 color: #2ecc71;

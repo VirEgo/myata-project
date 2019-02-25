@@ -16,7 +16,12 @@ header {
 .header-search {
   border: none;
   color: #34495e;
-  width: 400px; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .header-search {
+      margin-bottom: 1rem; } }
   .header-search input,
   .header-search button {
     background-color: #ecf0f1; }
@@ -25,7 +30,11 @@ header {
     color: #34495e;
     border-radius: 5px;
     outline: none;
-    box-shadow: none; }
+    box-shadow: none;
+    width: 70%;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
     .header-search input:focus {
       background-color: #ecf0f1;
       border: none;
@@ -34,11 +43,15 @@ header {
 
 .search-btn {
   border: none;
-  position: absolute;
-  left: -3rem;
-  z-index: 12;
   outline: none;
-  box-shadow: none; }
+  box-shadow: none;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 35px; }
+  .search-btn:focus, .search-btn:active {
+    outline: none !important;
+    box-shadow: none !important; }
 
 .input-group-append .search-btn {
   z-index: 12 !important;
@@ -48,7 +61,7 @@ header {
 .contacts-header {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: flex-end; }
   .contacts-header .phone-wrapper {
     display: flex;
     flex-direction: row;
@@ -63,12 +76,13 @@ header {
 
 .login-card {
   border-radius: 5px; }
+  @media screen and (max-width: 576px) {
+    .login-card {
+      margin-left: 0; } }
 
 .login-wrapper {
   display: flex;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   justify-content: center; }
   .login-wrapper a {
     color: #95a5a6;
@@ -108,7 +122,9 @@ header {
 .card-wrapper {
   padding: 10px 10px;
   background-color: #ecf0f1;
-  border-radius: 5px; }
+  border-radius: 5px;
+  align-items: center;
+  display: flex; }
   .card-wrapper .card {
     width: 50px;
     height: 50px;
@@ -123,25 +139,44 @@ header {
     margin-left: 2rem; }
     .card-wrapper .items p {
       display: block;
-      color: #2ecc71; }
+      color: #2ecc71;
+      margin-bottom: 0; }
     .card-wrapper .items span {
       color: #34495e; }
 
 .nav-wrapper {
   width: 100%;
-  background-color: #34495e; }
+  background-color: #34495e;
+  display: flex; }
+  .nav-wrapper .nav-mobile {
+    display: none; }
+    @media screen and (max-width: 576px) {
+      .nav-wrapper .nav-mobile {
+        display: flex;
+        text-transform: uppercase; }
+        .nav-wrapper .nav-mobile a {
+          color: #fff; } }
 
-.nav {
+.nav-desctop {
   font-size: 14px;
   text-align: center;
   font-family: "Roboto", sans-serif;
   padding: 28px 0; }
-  .nav a {
+  @media screen and (max-width: 576px) {
+    .nav-desctop {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+  .nav-desctop li {
+    display: flex;
+    flex-direction: row; }
+  .nav-desctop a {
     color: #fff;
     padding: 0.5rem .5rem; }
-    .nav a:hover {
+    .nav-desctop a:hover {
       color: #2ecc71; }
-  .nav a:after {
+  .nav-desctop a:after {
     content: '';
     background-image: url(../img/leaf.png);
     background-repeat: no-repeat;
@@ -174,6 +209,9 @@ header {
     .catalog-wrapper .carousel-item .middle-text {
       font-size: 29.5px;
       font-weight: 100; }
+      @media screen and (max-width: 576px) {
+        .catalog-wrapper .carousel-item .middle-text {
+          font-size: 18.5px; } }
     .catalog-wrapper .carousel-item .more-info {
       background-color: #34495e;
       color: #fff;
@@ -181,11 +219,21 @@ header {
       height: 45px;
       align-self: flex-end;
       margin-top: 25px;
-      border-radius: 8px; }
+      border-radius: 8px;
+      border: none; }
+      @media screen and (max-width: 576px) {
+        .catalog-wrapper .carousel-item .more-info {
+          width: auto;
+          height: auto;
+          margin-top: 80px; } }
 
 .header-text {
   font-size: 44px;
   font-weight: bold; }
+  @media screen and (max-width: 576px) {
+    .header-text {
+      font-size: 26px;
+      padding-bottom: 40px; } }
 
 .button-wrapper {
   display: flex;
@@ -253,8 +301,6 @@ header {
     color: #34495e;
     padding-bottom: 80px; }
   .our-benefits-wrapper .benefits-items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     align-items: center; }
   .our-benefits-wrapper .benefit-logo-desc {
     font-size: 20px;
@@ -264,7 +310,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 2rem; }
 
 .products-category-slider {
   padding: 80px 0; }
@@ -302,37 +349,39 @@ header {
       left: calc(50% - 5px); }
 
 .our-products .product-photo {
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .our-products .product-photo::before {
     content: url("../img/hit-label.png");
     position: absolute;
-    right: -7px;
-    display: block;
-    width: 40px;
-    height: 40px; }
+    right: -7px; }
   .our-products .product-photo::after {
     content: url("../img/in-stock.png");
     position: absolute;
     left: -19px;
     bottom: -7px;
-    display: block;
-    width: 40px;
-    height: 40px; }
+    display: block; }
   .our-products .product-photo:last-child::before {
     content: url("../img/out-of-stock.png");
     display: block;
     position: absolute;
     left: -19px;
-    bottom: -7px;
-    display: block;
-    width: 40px;
-    height: 40px; }
+    bottom: -7px; }
 
 .our-products .products-items-wrapper {
   position: relative;
   padding-bottom: 80px; }
+  .our-products .products-items-wrapper .card-group .card {
+    min-height: 100%;
+    width: 18rem;
+    border: 1px solid transparent;
+    text-align: center;
+    display: flex;
+    align-items: stretch; }
   .our-products .products-items-wrapper .product-info {
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
     .our-products .products-items-wrapper .product-info .product-desc {
       font-size: 16px; }
     .our-products .products-items-wrapper .product-info .product-price {
