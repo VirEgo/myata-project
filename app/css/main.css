@@ -5,10 +5,15 @@
 body {
   font-size: 16px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box; }
 
 header {
   padding-bottom: 3rem; }
+
+.row {
+  margin-left: 0;
+  margin-right: 0; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -155,7 +160,12 @@ header {
         display: flex;
         text-transform: uppercase; }
         .nav-wrapper .nav-mobile a {
-          color: #fff; } }
+          color: #fff; }
+        .nav-wrapper .nav-mobile .navbar-expand-lg .fas {
+          color: white; } }
+    .nav-wrapper .nav-mobile .navbar-toggler {
+      outline: none;
+      box-shadow: none; }
 
 .nav-desctop {
   font-size: 14px;
@@ -202,6 +212,11 @@ header {
       right: 5%;
       display: flex;
       flex-direction: column; }
+      @media screen and (max-width: 576px) {
+        .catalog-wrapper .carousel-item .text-block {
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 5%;
+          padding: 10px; } }
     .catalog-wrapper .carousel-item p {
       margin: 0;
       padding: 0;
@@ -211,7 +226,7 @@ header {
       font-weight: 100; }
       @media screen and (max-width: 576px) {
         .catalog-wrapper .carousel-item .middle-text {
-          font-size: 18.5px; } }
+          font-size: 12.5px; } }
     .catalog-wrapper .carousel-item .more-info {
       background-color: #34495e;
       color: #fff;
@@ -225,14 +240,17 @@ header {
         .catalog-wrapper .carousel-item .more-info {
           width: auto;
           height: auto;
-          margin-top: 80px; } }
+          margin-top: 25px;
+          font-size: 12px; } }
 
 .header-text {
   font-size: 44px;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 80px 0;
+  margin: auto; }
   @media screen and (max-width: 576px) {
     .header-text {
-      font-size: 26px;
+      font-size: 19px;
       padding-bottom: 40px; } }
 
 .button-wrapper {
@@ -326,27 +344,39 @@ header {
       border-radius: 5px;
       text-align: center;
       align-self: center; }
-  .products-category-slider .category-list a {
-    padding: 25px 55px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #34495e;
-    color: #fff;
-    display: inline-block;
+  .products-category-slider .carousel-inner {
     text-align: center;
-    border-radius: 8px;
-    text-decoration: none;
-    position: relative; }
-    .products-category-slider .category-list a::before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 10px 0 10px;
-      border-color: #34495e transparent transparent transparent;
-      position: absolute;
-      bottom: -7px;
-      left: calc(50% - 5px); }
+    display: flex;
+    overflow: visible; }
+    .products-category-slider .carousel-inner a {
+      padding: 25px 55px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #34495e;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      position: relative; }
+      .products-category-slider .carousel-inner a::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #34495e transparent transparent transparent;
+        position: absolute;
+        bottom: -7px;
+        left: calc(50% - 5px); }
+      @media screen and (max-width: 576px) {
+        .products-category-slider .carousel-inner a {
+          padding: 15px 20px; } }
+  .products-category-slider .carousel-control-prev,
+  .products-category-slider .carousel-control-next {
+    background-color: #000;
+    opacity: .3;
+    border-radius: 5px; }
 
 .our-products .product-photo {
   position: relative;
@@ -378,6 +408,10 @@ header {
     text-align: center;
     display: flex;
     align-items: stretch; }
+  .our-products .products-items-wrapper .product-photo img {
+    border: 1px solid #ecf0f1; }
+    .our-products .products-items-wrapper .product-photo img:hover {
+      border-color: #2ecc71; }
   .our-products .products-items-wrapper .product-info {
     text-align: center;
     display: flex;
@@ -386,6 +420,8 @@ header {
       font-size: 16px; }
     .our-products .products-items-wrapper .product-info .product-price {
       color: #2ecc71; }
+      .our-products .products-items-wrapper .product-info .product-price s {
+        color: #c7cccf; }
     .our-products .products-items-wrapper .product-info .buy {
       background-color: #34495e;
       color: #fff;
@@ -398,4 +434,128 @@ header {
       align-self: center; }
     .our-products .products-items-wrapper .product-info .one-click-buy {
       display: inline-block;
-      border-bottom: 1px dashed #bcc6c6; }
+      text-decoration-style: dashed; }
+      .our-products .products-items-wrapper .product-info .one-click-buy::first-letter {
+        text-transform: uppercase; }
+
+.our-products .all-hits {
+  text-align: right;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-family: Roboto;
+  color: #34495e;
+  padding-bottom: 5px; }
+  .our-products .all-hits:hover {
+    color: #34495e;
+    text-decoration-style: dashed; }
+
+.about-us-wrapper {
+  background-image: url(../img/about-us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 80px; }
+  .about-us-wrapper .article-body img {
+    float: left;
+    margin: 0 20px 0 0; }
+  .about-us-wrapper .header-text {
+    text-align: center;
+    padding: 80px 0; }
+    .about-us-wrapper .header-text h3 {
+      text-transform: uppercase;
+      font-weight: bold; }
+
+.news-wrapper {
+  position: relative;
+  margin-bottom: 80px; }
+  .news-wrapper .card {
+    border: 1px transparent; }
+    @media screen and (max-width: 576px) {
+      .news-wrapper .card {
+        padding-left: 0;
+        padding-right: 0;
+        flex: 0 0 50%; } }
+    @media screen and (min-width: 576px) {
+      .news-wrapper .card {
+        flex: 0 0 50%; } }
+  .news-wrapper img:hover {
+    border: 1px solid #2ecc71; }
+  .news-wrapper .card-body .publishing-date {
+    color: #2ecc71;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    margin-bottom: 0; }
+    .news-wrapper .card-body .publishing-date img {
+      margin-right: 10px; }
+  .news-wrapper .card-body a {
+    display: flex;
+    justify-content: flex-end; }
+    .news-wrapper .card-body a:hover {
+      text-decoration-style: dashed;
+      color: #34495e; }
+    @media screen and (max-width: 576px) {
+      .news-wrapper .card-body a {
+        justify-content: center; } }
+  .news-wrapper .up {
+    width: 37px;
+    height: 37px;
+    background-color: #34495e;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    bottom: -2rem;
+    right: 2rem; }
+    .news-wrapper .up i {
+      color: #fff; }
+
+.footer-wrapper {
+  background-color: #34495e; }
+  .footer-wrapper .row {
+    justify-content: center; }
+  .footer-wrapper .social-icons li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #2ecc71;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    margin-right: 10px; }
+    .footer-wrapper .social-icons li:hover {
+      background-color: #fff; }
+  .footer-wrapper .social-icons a {
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold; }
+  .footer-wrapper .nav-footer {
+    align-self: center;
+    text-transform: uppercase;
+    padding: 0; }
+    .footer-wrapper .nav-footer a {
+      color: #fff;
+      padding: 0 10px;
+      display: flex; }
+      .footer-wrapper .nav-footer a:after {
+        content: url("../img/leaf.png");
+        display: block;
+        padding-left: 10px; }
+    .footer-wrapper .nav-footer .nav:last-child::after {
+      content: "";
+      display: block; }
+  .footer-wrapper .social-footer {
+    align-self: center; }
+  .footer-wrapper a {
+    color: #fff;
+    text-decoration: none; }
+    .footer-wrapper a:hover {
+      color: #2ecc71; }
+
+.footer-copyright {
+  background-color: #2c3e50; }
+  .footer-copyright .copyright {
+    padding: 17px 0;
+    color: #2ecc71;
+    justify-content: center;
+    display: flex; }
