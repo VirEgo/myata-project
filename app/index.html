@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-lg-3 mobile-catalog">
                 <p class="btn catalog-title" data-toggle="collapse" href="#catalog-nav" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <img src="img/white-leaf.png" alt="Leaf"> 
+                    <img src="img/white-leaf.png" alt="Leaf"> 
                     <a> Каталог </a>
                 </p>
                 <div class="collapse" id="catalog-nav">
@@ -262,12 +262,18 @@
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
                                     <a href="#" class="top-seller">Хиты продаж</a>
+                                    <a href="#" class="promo">Акции</a>
+                                    <a href="#" class="new-arrival">Новинки</a>
                                   </div>
                                   <div class="carousel-item">
                                     <a href="#" class="promo">Акции</a>
+                                    <a href="#" class="new-arrival">Новинки</a>
+                                    <a href="#" class="top-seller">Хиты продаж</a>
                                   </div>
                                   <div class="carousel-item">
                                     <a href="#" class="new-arrival">Новинки</a>
+                                    <a href="#" class="top-seller">Хиты продаж</a>
+                                    <a href="#" class="promo">Акции</a>
                                   </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carousel-category" role="button" data-slide="prev">
@@ -282,32 +288,49 @@
 
                     </div>
                     <div class="row products-items-wrapper">
-                        <!-- <div class="card-deck">
-
-                            <div class="card">
+                        <div class="card-group mb-3 text-center">
+                            <div class="card mb-4">
                                 <img class="card-img-top" src="img/item1.png" alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <p class="card-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</p>
                                     <p class="card-text">55 грн</p>
-                                    <a href="#" class="btn btn-primary">В корзину</a>
-                                    <br>
+                                    <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-primary">В корзину</button>
                                     <a href="#" class="one-click-buy">купить в один клик</a>
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card mb-4">
                                 <img class="card-img-top" src="img/item2.png" alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <p class="card-text">Фонтан шоколадный Altezoro KZ-24/3</p>
                                     <p class="card-text"> <s>2 300 грн</s> 1 800 грн</p>
-                                    <a href="#" class="btn btn-primary">В корзину</a>
-                                    <br>
+                                    <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-primary">В корзину</button>
                                     <a href="#" class="one-click-buy">купить в один клик</a>
                                 </div>
                             </div>
-                        </div> -->
 
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                            <div class="card mb-4">
+                                <img class="card-img-top" src="img/item3.png" alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Плунжеры для мастики Листики с металлическим толкателем</p>
+                                    <p class="card-text"> 48 грн</p>
+                                    <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-primary">В корзину</button>
+                                    <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4">
+                                <img class="card-img-top" src="img/item4.png" alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text">Магнитная планка-держатель для ножей</p>
+                                    <p class="card-text"> <s>165 грн</s> 140 грн</p>
+                                    <button type="button" class="mt-auto btn btn-lg btn-block btn-outline-primary">В корзину</button>
+                                    <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                             <div class="product-photo">
                                 <img src="img/item1.png" alt="Silicon">
                             </div>
@@ -316,8 +339,10 @@
                                     Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.
                                 </div>
                                 <div class="product-price">55 грн</div>
-                                <button class="buy">В корзину</button>
-                                <a href="#" class="one-click-buy">купить в один клик</a>
+                                <div class="buttons">
+                                        <button class="buy">В корзину</button>
+                                        <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
@@ -329,8 +354,10 @@
                                     Фонтан шоколадный Altezoro KZ-24/3
                                 </div>
                                 <div class="product-price"><s>2 300грн</s> 1 800 грн</div>
-                                <button class="buy">В корзину</button>
-                                <a href="#" class="one-click-buy">купить в один клик</a>
+                                <div class="buttons">
+                                        <button class="buy">В корзину</button>
+                                        <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
@@ -342,8 +369,10 @@
                                     Плунжеры для мастики Листики с металлическим толкателем
                                 </div>
                                 <div class="product-price">48 грн</div>
-                                <button class="buy">В корзину</button>
-                                <a href="#" class="one-click-buy">купить в один клик</a>
+                                <div class="buttons">
+                                        <button class="buy">В корзину</button>
+                                        <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3">
@@ -353,10 +382,12 @@
                             <div class="product-info">
                                 <div class="product-desc"> Магнитная планка-держатель для ножей</div>
                                 <div class="product-price"> <s>165 грн</s> 140 грн</div>
-                                <button class="buy">В корзину</button>
-                                <a href="#" class="one-click-buy">купить в один клик</a>
+                                <div class="buttons">
+                                        <button class="buy">В корзину</button>
+                                        <a href="#" class="one-click-buy">купить в один клик</a>
+                                </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>

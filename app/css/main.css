@@ -448,7 +448,6 @@ header {
   position: relative;
   padding-bottom: 80px; }
   .our-products .products-items-wrapper .card-group .card {
-    min-height: 100%;
     width: 18rem;
     border: 1px solid transparent;
     text-align: center;
@@ -470,7 +469,7 @@ header {
       color: #2ecc71; }
       .our-products .products-items-wrapper .product-info .product-price s {
         color: #c7cccf; }
-    .our-products .products-items-wrapper .product-info .buy {
+    .our-products .products-items-wrapper .product-info .buttons .buy {
       background-color: #34495e;
       color: #fff;
       width: 170px;
@@ -480,10 +479,10 @@ header {
       border-radius: 8px;
       border: none;
       align-self: center; }
-    .our-products .products-items-wrapper .product-info .one-click-buy {
+    .our-products .products-items-wrapper .product-info .buttons .one-click-buy {
       display: inline-block;
       text-decoration-style: dashed; }
-      .our-products .products-items-wrapper .product-info .one-click-buy::first-letter {
+      .our-products .products-items-wrapper .product-info .buttons .one-click-buy::first-letter {
         text-transform: uppercase; }
 
 .our-products .all-hits {
@@ -529,8 +528,6 @@ header {
     @media screen and (min-width: 576px) {
       .news-wrapper .card {
         flex: 0 0 50%; } }
-  .news-wrapper img:hover {
-    border: 1px solid #2ecc71; }
   .news-wrapper .card-body .publishing-date {
     color: #2ecc71;
     padding-top: 14px;
@@ -558,6 +555,8 @@ header {
     right: 2rem; }
     .news-wrapper .up i {
       color: #fff; }
+  .news-wrapper .read-more {
+    color: #2ecc71; }
 
 .footer-wrapper {
   background-color: #34495e;

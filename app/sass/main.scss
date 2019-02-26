@@ -552,7 +552,7 @@ header {
         //     }
         .card-group {
             .card {
-                min-height: 100%;
+                
                 width: 18rem;
                 border: 1px solid transparent;
                 text-align: center;
@@ -583,22 +583,24 @@ header {
                     color: #c7cccf;
                 }
             }
-            .buy {
-                background-color: #34495e;
-                color: #fff;
-                width: 170px;
-                height: 45px;
-                align-self: flex-end;
-                margin-top: 25px;
-                border-radius: 8px;
-                border: none;
-                align-self: center;
-            }
-            .one-click-buy {
-                display: inline-block;
-                text-decoration-style: dashed;
-                &::first-letter {
-                    text-transform: uppercase;
+            .buttons {
+                .buy {
+                    background-color: #34495e;
+                    color: #fff;
+                    width: 170px;
+                    height: 45px;
+                    align-self: flex-end;
+                    margin-top: 25px;
+                    border-radius: 8px;
+                    border: none;
+                    align-self: center;
+                }
+                .one-click-buy {
+                    display: inline-block;
+                    text-decoration-style: dashed;
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
@@ -658,11 +660,6 @@ header {
             flex: 0 0 50%;
         }
     }
-     img {
-        &:hover {
-            border: 1px solid #2ecc71;
-        }
-     }
     .card-body {
         .publishing-date {
             color: #2ecc71;
@@ -698,6 +695,11 @@ header {
         i{
             color: #fff;
         }
+    }
+
+    .read-more {
+        color: #2ecc71;
+
     }
 }
 .footer-wrapper {
