@@ -453,6 +453,19 @@ header {
     text-align: center;
     display: flex;
     align-items: stretch; }
+    .our-products .products-items-wrapper .card-group .card .card-body .one-click-buy {
+      color: #2ecc71;
+      text-decoration-style: dashed; }
+      .our-products .products-items-wrapper .card-group .card .card-body .one-click-buy:hover {
+        color: #95a5a6;
+        border-bottom-color: #95a5a6; }
+    .our-products .products-items-wrapper .card-group .card .card-body .btn-outline-success {
+      background-color: #2ecc71;
+      color: #fff; }
+      .our-products .products-items-wrapper .card-group .card .card-body .btn-outline-success:hover {
+        background-color: #34495e;
+        color: #fff;
+        border: 1px solid #34495e; }
   .our-products .products-items-wrapper .product-photo img {
     width: 100%;
     border: 1px solid #ecf0f1; }
@@ -469,21 +482,6 @@ header {
       color: #2ecc71; }
       .our-products .products-items-wrapper .product-info .product-price s {
         color: #c7cccf; }
-    .our-products .products-items-wrapper .product-info .buttons .buy {
-      background-color: #34495e;
-      color: #fff;
-      width: 170px;
-      height: 45px;
-      align-self: flex-end;
-      margin-top: 25px;
-      border-radius: 8px;
-      border: none;
-      align-self: center; }
-    .our-products .products-items-wrapper .product-info .buttons .one-click-buy {
-      display: inline-block;
-      text-decoration-style: dashed; }
-      .our-products .products-items-wrapper .product-info .buttons .one-click-buy::first-letter {
-        text-transform: uppercase; }
 
 .our-products .all-hits {
   text-align: right;
@@ -563,6 +561,9 @@ header {
   padding: 50px 0; }
   .footer-wrapper .row {
     justify-content: center; }
+  .footer-wrapper .contacts-footer {
+    margin-top: 2rem;
+    text-align: center; }
   .footer-wrapper .social-icons li {
     width: 35px;
     height: 35px;
@@ -599,7 +600,9 @@ header {
       content: "";
       display: block; }
   .footer-wrapper .social-footer {
-    align-self: center; }
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; }
   .footer-wrapper a {
     color: #fff;
     text-decoration: none; }

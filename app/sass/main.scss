@@ -552,12 +552,30 @@ header {
         //     }
         .card-group {
             .card {
-                
                 width: 18rem;
                 border: 1px solid transparent;
                 text-align: center;
                 display: flex;
                 align-items: stretch;
+                .card-body {
+                    .one-click-buy {
+                        color: #2ecc71;
+                        text-decoration-style: dashed;
+                        &:hover {
+                            color: #95a5a6;
+                            border-bottom-color: #95a5a6; 
+                        }
+                    }
+                    .btn-outline-success{
+                        background-color: #2ecc71;
+                        color: #fff;
+                        &:hover {
+                            background-color: #34495e;
+                            color: #fff;
+                            border: 1px solid #34495e;
+                        }
+                    }
+                }
             }
         }
         .product-photo {
@@ -583,26 +601,26 @@ header {
                     color: #c7cccf;
                 }
             }
-            .buttons {
-                .buy {
-                    background-color: #34495e;
-                    color: #fff;
-                    width: 170px;
-                    height: 45px;
-                    align-self: flex-end;
-                    margin-top: 25px;
-                    border-radius: 8px;
-                    border: none;
-                    align-self: center;
-                }
-                .one-click-buy {
-                    display: inline-block;
-                    text-decoration-style: dashed;
-                    &::first-letter {
-                        text-transform: uppercase;
-                    }
-                }
-            }
+            // .buttons {
+            //     .buy {
+            //         background-color: #34495e;
+            //         color: #fff;
+            //         width: 170px;
+            //         height: 45px;
+            //         align-self: flex-end;
+            //         margin-top: 25px;
+            //         border-radius: 8px;
+            //         border: none;
+            //         align-self: center;
+            //     }
+            //     .one-click-buy {
+            //         display: inline-block;
+            //         text-decoration-style: dashed;
+            //         &::first-letter {
+            //             text-transform: uppercase;
+            //         }
+            //     }
+            // }
         }
         
     }
@@ -709,6 +727,10 @@ header {
         justify-content: center;
         
     }
+    .contacts-footer {
+        margin-top: 2rem;
+        text-align: center;
+    }
     .social-icons {
         
         li {
@@ -760,7 +782,9 @@ header {
         }
     }
     .social-footer {
-        align-self: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
     }
     a {
         color: #fff;
