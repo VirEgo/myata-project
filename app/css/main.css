@@ -172,6 +172,8 @@ header {
       box-shadow: none; }
   .nav-wrapper .navbar-nav {
     text-align: center; }
+    .nav-wrapper .navbar-nav li:hover {
+      background: linear-gradient(to top, rgba(44, 62, 80, 0.4), transparent); }
 
 .nav-desctop {
   font-size: 14px;

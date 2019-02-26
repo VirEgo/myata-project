@@ -211,6 +211,11 @@ header {
     }
     .navbar-nav {
         text-align: center;
+        li{
+            &:hover {
+                background: linear-gradient(to top,  rgba(44,62,80, .4), transparent);
+            }
+        }
     }
 }
 
