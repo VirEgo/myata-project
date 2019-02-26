@@ -18,6 +18,9 @@ header {
     margin-left: 0;
     margin-right: 0;
 }
+.navbar {
+    justify-content: center;
+}
 .uppercase {
     text-transform: uppercase;
 }
@@ -191,6 +194,7 @@ header {
         @media screen and (max-width: 576px) {
             display: flex;
             text-transform: uppercase;
+            justify-content: center;
             a {
                 color: #fff;
             }
@@ -204,6 +208,9 @@ header {
             outline: none;
             box-shadow: none;
         }
+    }
+    .navbar-nav {
+        text-align: center;
     }
 }
 
@@ -256,19 +263,25 @@ header {
         .text-block {
             position: absolute;
             top: 0;
-            right: 5%;
+            left: 30%;
+            text-align: right;
             display: flex;
             flex-direction: column;
             @media screen and (max-width:576px) {
                 background-color:rgba(255, 255, 255,.5);
                 border-radius: 5%;
-                padding: 10px;
+                padding: 8px 23px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: left;
             }
         }
         p {
             margin: 0;
             padding: 0;
-            line-height: 40px;
+            line-height: 37px;
+            margin-top: 1rem;
         }
         .middle-text {
             font-size: 29.5px;
@@ -294,6 +307,35 @@ header {
             }
         }
     }
+    .mobile-catalog {
+        display: none;
+        @media screen and (max-width: 576px) {
+            display: block;
+        }
+    }
+    .catalog-title {
+        font-size: 20px;
+        font-weight: bold;
+        width: 100%;
+        background-color: #2ecc71;
+        margin: 0;
+        text-align: center;
+        padding: 30px 15px;
+        border-radius: 5px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: '\f078';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 1rem;
+        }
+        img {
+            margin-right: 1rem;
+        }
+    }
 }
 
 .header-text {
@@ -301,6 +343,8 @@ header {
     font-weight: bold;
     padding: 80px 0;
     margin: auto;
+    text-transform: uppercase;
+    color: #34495e;
     @media screen and (max-width: 576px) {
         font-size: 19px;
         padding-bottom: 40px;
@@ -312,6 +356,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width:576px){
+        display: none;
+    }
     button {
         width: 100%;
         border: none;
@@ -333,6 +380,8 @@ header {
             color: #fff;
             display: flex;
             align-items: center;
+            padding: 30px 10px;
+            position: relative;
             &::before {
                 content: '';
                 width: 5px;
@@ -342,34 +391,39 @@ header {
                 display: block;
                 margin-right: 10px;
             }
+            &::after {
+                content: '';
+                width: 90%;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:last-child::after {
+                content: "";
+                display: none;
+            }
+
+            &:hover {
+                background-color: #27ae60;
+            }
         }
         .dropdown-menu {
-            padding: 0;
+            background-color: #2ecc71;
+            
         }
     }
     .dropright {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-    }
-    .catalog-title {
-        font-size: 20px;
-        font-weight: bold;
-        width: 100%;
-        background-color: #2ecc71;
-        margin: 0;
-        text-align: center;
-        padding: 30px 15px;
-        border-radius: 5px;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &::before {
-            content: url("../img/white-leaf.png");
-            display: block;
-            margin-right: 1rem;
+        button {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
     }
+    
 }
 
 .our-benefits-wrapper {
@@ -457,19 +511,19 @@ header {
 
 .our-products {
     .product-photo {
-        position: relative;
         text-align: center;
+        position: relative;
         &::before {
             content: url("../img/hit-label.png");
             position: absolute;
-            right: -7px;
+            right: 15px;
+            top: 0;
         }
         &::after {
             content: url("../img/in-stock.png");
             position: absolute;
-            left: -19px;
-            bottom: -7px;
-            display: block;
+            left: -18px;
+            bottom: -5px;
         }
         &:last-child::before {
             content: url("../img/out-of-stock.png");
@@ -503,6 +557,7 @@ header {
         }
         .product-photo {
             img {
+                width: 100%;
                 border: 1px solid #ecf0f1;
                 &:hover {
                     border-color: #2ecc71;
@@ -513,6 +568,7 @@ header {
             text-align: center;
             display: flex;
             flex-direction: column;
+            margin-bottom: 1rem;
             .product-desc {
                 font-size: 16px;
             }
@@ -568,7 +624,7 @@ header {
     .article-body {
         img {
             float: left;
-            margin: 0 20px 0 0;
+            padding: 0px 9px 0 0;
         }
     }
     .header-text {
@@ -577,6 +633,8 @@ header {
         h3{
             text-transform: uppercase;
             font-weight: bold;
+            color: #fff;
+            font-size: 44px;
         }
     }
 }
@@ -639,6 +697,7 @@ header {
 }
 .footer-wrapper {
     background-color: #34495e;
+    padding: 50px 0;
     .row {
         justify-content: center;
         
@@ -669,18 +728,22 @@ header {
         align-self: center;
         text-transform: uppercase;
         padding: 0;
-        a {
-            color: #fff;
-            padding: 0 10px;
+        li {
             display: flex;
             &:after {
                 content: url("../img/leaf.png");
                 display: block;
                 padding-left: 10px;
             }
-            
-    
-            
+            &:last-child::after {
+                content: '';
+            }
+        }
+        a {
+            color: #fff;
+            padding: 0 10px;
+            display: flex;
+         
         }
         .nav {
             &:last-child::after {
