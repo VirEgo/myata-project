@@ -1,0 +1,14 @@
+.btn {
+  white-space: unset; }
+
+.search-btn {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 35px; }
+  .search-btn:focus, .search-btn:active {
+    outline: none !important;
+    box-shadow: none !important; }

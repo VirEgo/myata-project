@@ -1,0 +1,14 @@
+// colors variables
+$white: #ffffff;
+$dirt-white: #95a5a6;
+$black: #000000;
+$bg-header: #34495e;
+$green-text: #2ecc71;
+$darkgreen-text: #27ae60;
+
+.uppercase {
+    text-transform: uppercase;
+    @media screen and (max-width: 1080px){
+        justify-content: center;
+    }
+}
