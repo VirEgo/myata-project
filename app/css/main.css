@@ -226,7 +226,8 @@ header {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.5); }
+      border: 1px solid #ffffff;
+      background-color: transparent; }
       .catalog-wrapper .carousel-custom .slider-indicator.active {
         background-color: #ffffff; }
   .catalog-wrapper .carousel-item {
