@@ -632,7 +632,7 @@ header {
       @media screen and (max-width: 576px) {
         .news-wrapper .card-body a {
           justify-content: center; } }
-  .news-wrapper .up {
+  .news-wrapper .up-button {
     width: 37px;
     height: 37px;
     background-color: #34495e;
@@ -641,7 +641,7 @@ header {
     position: absolute;
     bottom: -2rem;
     right: 2rem; }
-    .news-wrapper .up i {
+    .news-wrapper .up-button i {
       color: #ffffff; }
   .news-wrapper .read-more {
     color: #2ecc71; }

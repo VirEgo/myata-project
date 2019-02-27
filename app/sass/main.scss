@@ -374,7 +374,6 @@ header {
         }
     }
 }
-
 .header-text {
     font-size: 44px;
     font-weight: bold;
@@ -387,7 +386,6 @@ header {
         padding-bottom: 40px;
     }
 }
-
 .button-wrapper {
     display: flex;
     flex-direction: column;
@@ -396,7 +394,6 @@ header {
     @media screen and (max-width:892px){
         display: none;
     }
-    
     .catalog-menu-item {
         display: flex;
         width: 100%;
@@ -434,7 +431,6 @@ header {
                 background-color: $white;
             }
         }
-        
     }
     .dropdown {
         width: 100%;
@@ -512,9 +508,7 @@ header {
             }
         }
     }
-    
 }
-
 .our-benefits-wrapper {
     display: flex;
     flex-direction: column;
@@ -592,12 +586,12 @@ header {
     }
     .carousel-control-prev,
     .carousel-control-next {
-            background-color: $black;;
-            opacity: .3;
-            border-radius: 5px;
-            width: 35px;
-            height: 35px;
-        }
+        background-color: $black;;
+        opacity: .3;
+        border-radius: 5px;
+        width: 35px;
+        height: 35px;
+    }
 }
 
 .our-products {
@@ -706,8 +700,6 @@ header {
             }
         }
     }
-
-
 .about-us-wrapper {
     background-image: url(../img/about-us.png);
     background-repeat: no-repeat;
@@ -769,7 +761,7 @@ header {
         }
     }
 
-    .up {
+    .up-button {
         width: 37px;
         height: 37px;
         background-color: $bg-header;
@@ -803,7 +795,6 @@ header {
         }
     }
     .social-icons {
-        
         li {
             width: 35px;
             height: 35px;
@@ -859,7 +850,6 @@ header {
                 flex-direction: column;
             }
         }
-        
     }
     .social-footer {
         display: flex;
