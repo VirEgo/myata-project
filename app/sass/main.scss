@@ -1,5 +1,5 @@
 @import "../sass/buttons.scss";
-@import "../sass/helpers.scss";
+@import "../sass/variables.scss";
 * {
     padding: 0;
     margin: 0;
@@ -16,12 +16,19 @@ header {
     padding-bottom: 3rem;
 }
 
-.row {
+.uppercase {
+    text-transform: uppercase;
+    @media screen and (max-width: 1080px){
+        justify-content: center;
+    }
+}
+
+.row-custom {
     margin-left: 0;
     margin-right: 0;
 }
 
-.navbar {
+.navbar-custom {
     justify-content: center;
 }
 
@@ -251,8 +258,17 @@ header {
     background-size: cover;
     background-position: center;
     padding: 30px 0;
-    .carousel {
+    .carousel-custom {
         margin: auto;
+        .slider-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255,255,.5);
+            &.active {
+                background-color: $white;
+            }
+        }
     }
     .carousel-item {
         position: relative;

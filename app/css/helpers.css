@@ -1,5 +1,0 @@
-.uppercase {
-  text-transform: uppercase; }
-  @media screen and (max-width: 1080px) {
-    .uppercase {
-      justify-content: center; } }
